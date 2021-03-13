@@ -3,7 +3,7 @@
     <v-app-bar app color="indigo darken-4" dark>
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
 
-      <v-toolbar-title><v-icon>mdi-home</v-icon>Coleta Inteligente</v-toolbar-title>
+      <v-toolbar-title><v-icon>mdi-delete-empty</v-icon>Eco-Coleta</v-toolbar-title>
       
     </v-app-bar>
     <v-navigation-drawer v-model="drawer" absolute temporary>
@@ -16,35 +16,35 @@
             <v-list-item-icon>
               <v-icon>mdi-home</v-icon>
             </v-list-item-icon>
-            <v-list-item-title>Home</v-list-item-title>
+            <v-list-item-title>Inicio</v-list-item-title>
           </v-list-item>
 
           <v-list-item>
             <v-list-item-icon>
-              <v-icon>mdi-account</v-icon>
+              <v-icon>mdi-account-plus</v-icon>
             </v-list-item-icon>
             <v-list-item-title>Cadastro Pontos de Coleta</v-list-item-title>
           </v-list-item>
 
           <v-list-item>
             <v-list-item-icon>
-              <v-icon>mdi-account</v-icon>
+              <v-icon>mdi-account-plus-outline</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>Cadastro de Usuários</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-icon>
+              <v-icon>mdi-format-list-bulleted-square</v-icon>
             </v-list-item-icon>
             <v-list-item-title>Lista de Pontos de Coleta</v-list-item-title>
           </v-list-item>
 
           <v-list-item>
             <v-list-item-icon>
-              <v-icon>mdi-account</v-icon>
+              <v-icon>mdi-card-account-details-outline</v-icon>
             </v-list-item-icon>
             <v-list-item-title>Detalhes sobre Pontos de Coleta</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item>
-            <v-list-item-icon>
-              <v-icon>mdi-account</v-icon>
-            </v-list-item-icon>
-            <v-list-item-title>Cadastro de Usuários</v-list-item-title>
           </v-list-item>
         </v-list-item-group>
       </v-list>
@@ -67,3 +67,8 @@ export default {
   }),
 };
 </script>
+<style scoped>
+  .v-icon{
+    padding-right: 10px;
+  }
+</style>
