@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <h2 class="text-h5 text-center mb-3 mt-5">Pontos de coleta</h2>
-    <PointsTable :orderedList="orderPoints" />
+    <PointsTable v-if="pointsList.length > 0" :orderedList="orderPoints" />
   </v-container>
 </template>
 
