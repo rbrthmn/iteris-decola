@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <v-app-bar app color="indigo darken-4" dark>
+  <v-app class="app-top-bar">
+    <v-app-bar app color="grey darken-3" dark>
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
 
       <v-toolbar-title><v-icon>mdi-delete-empty</v-icon>Eco-Coleta</v-toolbar-title>
@@ -9,8 +9,8 @@
     <v-navigation-drawer v-model="drawer" absolute temporary>
       <v-list nav dense>
         <v-list-item-group
-          v-model="group" class="list-item"
-          active-class="deep-purple--text text--accent-4"
+          v-model="group"
+          active-class="black text--accent-4"
         >
           <router-link to="/">
           <v-list-item>
@@ -63,7 +63,7 @@
     <v-main>
       <router-view/>
     </v-main>
-  </div>
+  </v-app>
   
 </template>
 
@@ -81,5 +81,8 @@ export default {
 <style scoped>
   .v-icon{
     padding-right: 10px;
+  }
+  .app-top-bar a{
+    text-decoration: none;
   }
 </style>
