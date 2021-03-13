@@ -1,5 +1,5 @@
 <template>
-  <v-row justify="center">
+  <v-main justify="center">
     <v-text-field
       v-model="nameInput"
       @change="onChangeNameFilter()"
@@ -13,7 +13,7 @@
           <template v-slot:default>
             <thead>
               <tr>
-                <th colspan="2" class="text-left">Ponto</th>
+                <th colspan="2" class="text-left">Ponto de coleta</th>
                 <th class="text-left">CEP</th>
               </tr>
             </thead>
@@ -35,7 +35,7 @@
                     ><strong>{{ point.nome }}</strong></a
                   >
                 </td>
-                <td class="text-right">{{ point.cep }}</td>
+                <td class="text-left">{{ point.cep }}</td>
               </tr>
             </tbody>
           </template>
@@ -71,7 +71,7 @@
         </v-card-actions>
       </v-card>
     </v-dialog>
-  </v-row>
+  </v-main>
 </template>
 
 <script>
@@ -84,7 +84,12 @@ export default {
     },
   },
   data() {
-    return { dialog: false, currentPoint: {}, nameInput: "", filteredList: [] };
+    return {
+      dialog: false,
+      currentPoint: {},
+      nameInput: "",
+      filteredList: [],
+    };
   },
   created() {
     this.filteredList = this.orderedList;
