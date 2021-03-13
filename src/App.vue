@@ -9,43 +9,54 @@
     <v-navigation-drawer v-model="drawer" absolute temporary>
       <v-list nav dense>
         <v-list-item-group
-          v-model="group"
+          v-model="group" class="list-item"
           active-class="deep-purple--text text--accent-4"
         >
+          <router-link to="/">
           <v-list-item>
             <v-list-item-icon>
               <v-icon>mdi-home</v-icon>
             </v-list-item-icon>
             <v-list-item-title>Inicio</v-list-item-title>
           </v-list-item>
+          </router-link>
 
+          <router-link to="/login">
+          <v-list-item>
+            <v-list-item-icon>
+              <v-icon>mdi-login</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>Login</v-list-item-title>
+          </v-list-item>
+          </router-link>
+
+          <router-link to="">
           <v-list-item>
             <v-list-item-icon>
               <v-icon>mdi-account-plus</v-icon>
             </v-list-item-icon>
             <v-list-item-title>Cadastro Pontos de Coleta</v-list-item-title>
           </v-list-item>
+          </router-link>
 
+          <router-link to="">
           <v-list-item>
             <v-list-item-icon>
               <v-icon>mdi-account-plus-outline</v-icon>
             </v-list-item-icon>
             <v-list-item-title>Cadastro de Usuários</v-list-item-title>
           </v-list-item>
+          </router-link>
 
+          <router-link to="/points">
           <v-list-item>
             <v-list-item-icon>
               <v-icon>mdi-format-list-bulleted-square</v-icon>
             </v-list-item-icon>
             <v-list-item-title>Lista de Pontos de Coleta</v-list-item-title>
           </v-list-item>
+          </router-link>
 
-          <v-list-item>
-            <v-list-item-icon>
-              <v-icon>mdi-card-account-details-outline</v-icon>
-            </v-list-item-icon>
-            <v-list-item-title>Detalhes sobre Pontos de Coleta</v-list-item-title>
-          </v-list-item>
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
