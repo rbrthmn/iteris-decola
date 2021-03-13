@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-
+import Home from '../components/Home.vue'
+import CadastroColeta from '../components/CadastroColeta'
 Vue.use(VueRouter)
 
 const routes = [
@@ -9,7 +9,14 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/Cadastro',
+    name: 'CadastroColeta',
+    component: CadastroColeta
   }
+
+ 
 ]
 
 const router = new VueRouter({
