@@ -1,69 +1,63 @@
 <template>
   <v-main>
     <h2>Cadastro de Coleta</h2>
-  <v-form v-model="valid">
-    
-    <v-container>
-      
-      <v-row justify='center'>
-        <v-col cols="12" md="4">
-          <v-text-field
-            v-model="Nome"
-            :rules="nomeRules"
-            label="Nome:"
-          ></v-text-field>
-        </v-col>
+    <v-form v-model="valid">
+      <v-container>
+        <v-row justify="center">
+          <v-col cols="12" md="4">
+            <v-text-field
 
-        <v-col cols="12" md="4">
-          <v-text-field class="1"
-            v-model="Telefone"
-            :rules="telefoneRules"
-            label="Telefone:"
-            required
-          ></v-text-field>
-        </v-col>
+              v-model="Nome"
+              :rules="nomeRules"
+              label="Nome:"
+            ></v-text-field>
+          </v-col>
 
-        <v-col cols="12" md="4">
-          <v-text-field
-            v-model="email"
-            :rules="emailRules"
-            label="E-mail"
-            required
-          ></v-text-field>
-        </v-col>
+          <v-col cols="12" md="4">
+            <v-text-field
+              class="1"
+              v-model="Telefone"
+              :rules="telefoneRules"
+              label="Telefone:"
+              required
+            ></v-text-field>
+          </v-col>
 
-        <v-col cols="12" md="4">
-        <v-text-field
-          v-model="Endereço"
-          :rules="endereçoRules"
-          label="Endereço:"
-          required
-        ></v-text-field>
-           </v-col>
+          <v-col cols="12" md="4">
+            <v-text-field
+              v-model="email"
+              :rules="emailRules"
+              label="E-mail"
+              required
+            ></v-text-field>
+          </v-col>
 
-        <v-col cols="12" md="4">
-        <v-text-field
-          v-model="Cep"
-          :rules="cepRules"
-          label="Cep:"
-          required
-        ></v-text-field>
+          <v-col cols="12" md="4">
+            <v-text-field
+              v-model="Endereço"
+              :rules="endereçoRules"
+              label="Endereço:"
+              required
+            ></v-text-field>
+          </v-col>
 
-         </v-col>
+          <v-col cols="12" md="4">
+            <v-text-field
+              v-model="Cep"
+              :rules="cepRules"
+              label="Cep:"
+              required
+            ></v-text-field>
+          </v-col>
 
-        <v-file-input
-          accept="image/*"
-          label="Nos envie uma foto da fachada."
-        ></v-file-input>
+          <v-file-input
+            accept="image/*"
+            label="Nos envie uma foto da fachada."
+          ></v-file-input>
 
           <!-- CHECKBOX -->
-        
-        <v-col
-        
-            cols="12"
-            sm="4"
-            md="4"
-          >
+
+          <v-col cols="12" sm="4" md="4">
             <v-checkbox
               v-model="ex4"
               label="Aço"
@@ -79,11 +73,7 @@
               hide-details
             ></v-checkbox>
           </v-col>
-          <v-col
-            cols="12"
-            sm="4"
-            md="4"
-          >
+          <v-col cols="12" sm="4" md="4">
             <v-checkbox
               v-model="ex4"
               label="Óleo de cozinha"
@@ -99,11 +89,7 @@
               hide-details
             ></v-checkbox>
           </v-col>
-          <v-col
-            cols="12"
-            sm="4"
-            md="4"
-          >
+          <v-col cols="12" sm="4" md="4">
             <v-checkbox
               v-model="ex4"
               label="Capsulas de café"
@@ -122,11 +108,7 @@
         </v-row>
 
         <v-row class="mt-12">
-          <v-col
-            cols="12"
-            sm="4"
-            md="4"
-          >
+          <v-col cols="12" sm="4" md="4">
             <v-checkbox
               v-model="ex4"
               label="Remédio"
@@ -142,11 +124,7 @@
               hide-details
             ></v-checkbox>
           </v-col>
-          <v-col
-            cols="12"
-            sm="4"
-            md="4"
-          >
+          <v-col cols="12" sm="4" md="4">
             <v-checkbox
               v-model="ex4"
               label="Entulho"
@@ -155,11 +133,14 @@
               hide-details
             ></v-checkbox>
           </v-col>
-        
-      </v-row>
-    </v-container>
-  </v-form>
-</v-main>
+        </v-row>
+      </v-container>
+    </v-form>
+    <v-btn depressed
+>
+      Cadastrar
+    </v-btn>
+  </v-main>
 </template>
 
 <script>
@@ -181,7 +162,8 @@ export default {
 </script>
 
 <style scoped>
-   h2{
-      text-align: center;
-    }
+h2 {
+  text-align: center;
+}
+
 </style>
