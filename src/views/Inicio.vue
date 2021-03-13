@@ -21,8 +21,9 @@ export default {
     flex-direction: column;
     align-items: center;
     padding-top: 10px;
-    background-color: cornsilk;
+    background-color: black;
     justify-content: space-around;
+
   }
   .texto-pagina{
     padding-top: 20px;
@@ -31,7 +32,7 @@ export default {
     font-size: large;
   }
   .v-image{
-    margin-top: 20px;
+    margin-top: 15px;
     background-color:cornsilk;
   }
 

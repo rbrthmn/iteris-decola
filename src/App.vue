@@ -1,6 +1,6 @@
 <template>
-  <v-app>
-    <v-app-bar app color="indigo darken-4" dark>
+  <v-app class="app-top-bar">
+    <v-app-bar app color="grey darken-3" dark>
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
 
       <v-toolbar-title
@@ -11,8 +11,7 @@
       <v-list nav dense>
         <v-list-item-group
           v-model="group"
-          class="list-item"
-          active-class="deep-purple--text text--accent-4"
+          active-class="black text--accent-4"
         >
           <router-link to="/">
             <v-list-item>
@@ -65,6 +64,7 @@
       <router-view />
     </v-main>
   </v-app>
+  
 </template>
 
 <script>
@@ -78,7 +78,10 @@ export default {
 };
 </script>
 <style scoped>
-.v-icon {
-  padding-right: 10px;
-}
+  .v-icon{
+    padding-right: 10px;
+  }
+  .app-top-bar a{
+    text-decoration: none;
+  }
 </style>

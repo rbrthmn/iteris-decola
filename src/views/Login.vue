@@ -28,7 +28,7 @@ export default {
     flex-direction: column;
     align-items: center;
     padding-top: 30px;
-}
+} 
 .email{
     padding-top: 10px;
 }

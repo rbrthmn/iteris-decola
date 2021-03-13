@@ -1,5 +1,12 @@
 <template>
   <v-row justify="center">
+    <v-text-field
+      v-model="nameInput"
+      @change="onChangeNameFilter()"
+      label="Nome do ponto"
+      clearable
+      class="mt-5 mb-5 ml-5 mr-5"
+    ></v-text-field>
     <v-dialog v-model="dialog" width="600px">
       <template v-slot:activator="{ on, attrs }">
         <v-simple-table>
@@ -11,7 +18,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr v-for="point of orderedList" :key="point.id">
+              <tr v-for="point of filteredList" :key="point.id">
                 <td>
                   <v-avatar size="24">
                     <img :src="point.imagem" :alt="point.nome" />
@@ -77,12 +84,24 @@ export default {
     },
   },
   data() {
-    return { dialog: false, currentPoint: {} };
+    return { dialog: false, currentPoint: {}, nameInput: "", filteredList: [] };
+  },
+  created() {
+    this.filteredList = this.orderedList;
   },
   methods: {
     openPointDetails(point) {
       this.dialog = true;
       this.currentPoint = point;
+    },
+    onChangeNameFilter() {
+      if (this.nameInput) {
+        this.filteredList = this.orderedList.filter(
+          (e) => e.nome.toLowerCase().indexOf(this.nameInput.toLowerCase()) > -1
+        );
+      } else {
+        this.filteredList = this.orderedList;
+      }
     },
   },
 };
